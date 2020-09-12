@@ -1,0 +1,58 @@
+import java.io.*;
+import java.util.*;
+
+public class Mangoes 
+{
+
+    public static void main(String[] args) 
+    {
+      
+        int i,n;
+        int s=0;
+        int a=0;      
+       Scanner sc= new Scanner(System.in);
+       n= sc.nextInt();
+       int[] arr=new int[n];
+       int[] arr2=new int[n];
+       while (n>=1 && n<=1000)
+       {
+       for (i=0;i<n;i++)
+       {
+           arr[i]=sc.nextInt();
+           s=s+arr[i];
+       }
+       }
+        if (s%3==0)
+        {
+            System.out.println(s);
+        }
+        else
+        {
+            for (i=0;i<n;i++)
+            {
+                a=s-arr[i];
+                if (a%3==0)
+                {
+                arr2[i]=a;
+                }
+            }
+        }
+        int max=arr2[0];
+        if (arr2.length==1)
+        {
+            System.out.println(arr2[0]);
+        }
+        else
+        {
+        for(i=0;i<n;i++)
+        {
+            if(arr2[i] > max)
+            {
+                max = arr2[i];
+            }
+        }
+        System.out.println(max);
+        }
+  
+    }
+}

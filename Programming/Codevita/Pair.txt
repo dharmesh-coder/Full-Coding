@@ -1,0 +1,127 @@
+import java.util.*;
+import java.Lang.Math;
+
+
+
+
+
+public class Pair
+{
+   static int factorial(int n){    
+  if (n == 0)    
+    return 1;    
+  else    
+    return(n * factorial(n-1));    
+ } 
+  
+  
+  
+  
+  
+  
+  
+  
+  public static void main(String args[])
+  {
+    int i,j,z=0;
+    Scanner sc=new Scanner(System.in);
+    int[] N=new int[3];
+    int[] a=new int[3];
+    int[] Bit=new int[2];
+    int[] even=new int[n];
+    int[] odd =new int[n];
+    n=sc.nextInt();
+    if (n<=500)
+    {
+    for (i=0;i<n;i++)
+    {
+      N[i]=sc.nextInt();
+     int largest = 0; 
+    int smallest = 9; 
+  
+    while(N[i]!= 0)  
+    { 
+        int r = N[i] % 10; 
+        largest = Math.max(r, largest); 
+        smallest = Math.min(r, smallest); 
+        N[i] = N[i] / 10; 
+    }
+     Bit[i]=largest*11+smallest*7;
+      a[i]=Bit[i];
+      int count=0;
+     while(a[i] != 0)
+        {
+            a[i] /= 10;
+            ++count;
+        }
+      
+      if ( count==3)
+      {
+       Bit[i]=Bit[i]%100; 
+      }
+    }
+    
+    for (i=1;i<=n;i++)
+    {
+      a=0;
+      b=0;
+     if (i%2==0)
+     {
+       even[a]=Bit[i];
+       ++a;
+     }
+     else
+     {
+     odd[b]=Bit[i];
+     ++b;
+     }
+     }
+      n1=1;
+      n2=1;
+     for (i=0;i<n;i++)
+     {
+      for (j=i+1;j<n;j++)
+      {
+        if (even[i]/10==even[j]/10)
+        {
+            n1++;
+        }
+         else 
+         {
+          n1=n1;
+         }
+        if (odd[i]/10==odd[j]/10)
+        {
+            n2++;
+        }
+          else n2=n2;
+        
+      }
+       
+       int z=n1+n2;
+       
+       
+     int pair = factorial(z) / (factorial(2) * factorial(z-2));
+       System.out.println(pair);
+       
+       
+       
+     }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    }
+   }
+  }

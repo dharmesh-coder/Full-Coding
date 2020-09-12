@@ -1,0 +1,58 @@
+Problem : ISL Schedule
+(Repeated in CodeVita 2016 Round 1)
+
+The Indian Soccer League (ISL) is an annual football tournament.
+The group stage of ISL features N teams playing against each other with following set of rules:
+N teams play against each other twice - once at Home and once Away
+A team can play only one match per day
+A team cannot play matches on consecutive days
+A team cannot play more than two back to back Home or Away matches
+Number of matches in a day has following constraints
+The match pattern that needs to be followed is -
+Day 1 has two matches and Day 2 has one match,
+Day 3 has two matches and Day 4 has one match and so on
+There can never be 3 or more matches in a day
+Gap between two successive matches of a team cannot exceed floor(N/2) days where floor is the mathematical function floor()
+Derby Matches (any one)
+At least half of the derby matches should be on weekend
+At least half of the weekend matches should be derby matches
+Your task is to generate a schedule abiding to above rules. 
+
+Input Format:
+
+First line contains number of teams (N).
+Next line contains state name of teams, delimited by space
+Output Format:
+
+Match format: Ta-vs-Tb
+where Ta is the home team with id a and Tb is the away team with id b.
+The final ascii string should contain all characters as in the provided input, at least once.
+For each day print the match(es) in following format:-
+Two matches:- "#D Ta-vs-Tb Tm-vs-Tn"
+One match:- "#D Tx-vs-Ty"
+where D is the day id and [a, b, m, n, x, y] are team ids. 
+
+Constraints:
+1. 8 <= N <= 100
+Note : 
+Team ids are unique and have value between 1 to N
+Day id starts with 1
+Every 6th and 7th day are weekends
+Derby is a football match between two teams from the same state
+
+Sample Input and Output
+
+SNo.	Input	Output
+1	
+8
+S1 S2 S5 S4 S3 S1 S6 S6	
+#1 T1-vs-T6 T3-vs-T5
+#2 T7-vs-T4
+#3 ... and so on
+
+Explanation:
+
+
+There are 8 teams with following information:- 
+Team ID	1	2	3	4	5	6	7	8
+State Name	S1	S2	S5	S4	S3	S1	S6	S6

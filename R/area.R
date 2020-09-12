@@ -1,0 +1,10 @@
+print("Enter the base of triangle")
+b=scan(n=1)
+print("Enter the height of traingle")
+h=scan(n=1)
+print("Enter the radius of circle")
+r=scan(n=1)
+x=0.5*b*h
+y=pi*(r**2)
+cat("The area of traingle is",x,"\n")
+cat("The area of circle is",y)
