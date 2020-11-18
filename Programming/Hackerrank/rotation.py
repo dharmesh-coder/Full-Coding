@@ -1,14 +1,13 @@
 n,k,q=[int(x) for x in input().split()]
 a=list(map(int,input().strip().split()))[:n]
 indi=[]
+ans=[0]*n
 for i in range(q):
     p=int(input())
-    a.append(p)
-for i in range(k):
-    temp=a[n-1]
-    for i in range(n-1,1):
-        a[i]=a[i-1]
-    a[0]=temp
+    indi.append(p)
+k=k%n
+for i in range(n):
+    ans[n-1-i]=a[n-i-k-1]  
 for i in indi:
-    print(a[i])
+    print(ans[i])
     
