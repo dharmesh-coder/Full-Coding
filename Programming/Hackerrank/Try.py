@@ -1,6 +1,19 @@
-i=1
+s=input()
+t=input()
+k=int(input())
+a=len(s)
+b=len(t)
+c=min(a,b)
+d=0
 while True:
-    if (i%2==0):
+    if(s[0:d]!=t[0:d]):
         break
-    print(i)
-    i+=1
+    d+=1
+    if(d+1>c):
+        break
+ans=len(s)+len(t)-2*d
+if(ans<=k):
+    print("Yes")
+else:
+    print("No")
+    
